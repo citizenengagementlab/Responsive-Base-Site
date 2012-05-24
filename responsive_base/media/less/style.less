@@ -1,0 +1,47 @@
+@import "normalize.less";
+@import "grid.less";
+//@import "global-mobile.less"; //these are initializr default styles
+
+/* ===== Primary Styles ========================================================
+   Author: Mike Vattuone
+   ========================================================================== */
+   
+@total-width: 100%;
+
+div#feature-container{
+	-webkit-box-shadow:0 5px 10px #aaa;
+	-moz-box-shadow:0 5px 10px #aaa;
+	box-shadow:0 5px 10px #aaa;
+	background: #aaa;
+	margin-bottom:20px;
+	article#feature {
+		.column(12);
+	}
+}
+
+article#primary {
+	margin-top:20px;
+	.row(12);
+	float:none;
+	article#column-left, article#column-right {
+		.column(6,12);
+	}	
+}
+
+
+
+aside#secondary {
+	.row(12);
+	margin-top:20px;
+	float:none;
+	padding:5px;
+	font-size:13px;
+	article#column-left, article#column-right {
+		.column(6,12);
+	}
+}
+
+@total-width: 100%; // Overriding @total-width to be fluid
+@import "media-queries.less";
+@import "helpers.less";
+@import "print.less";
